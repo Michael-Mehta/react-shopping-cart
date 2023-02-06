@@ -1,7 +1,7 @@
 import './App.css';
  
 
-const Checkout = ({clearCart, copy, handleRemoveEdit}) => {
+const Checkout = ({clearCart, copy, handleRemoveEdit, showButton}) => {
   return (
     <div className="Checkout">
    
@@ -36,11 +36,11 @@ const Checkout = ({clearCart, copy, handleRemoveEdit}) => {
 
      <div className = "main-buttons">
 
-     <button onClick={clearCart} className = "see-items" >Purchase items</button>
-
+     {showButton && <button onClick={clearCart} className = "see-items" >Purchase items</button>}
+      
     </div>
 
-
+     {!showButton && <h3 className = "main-headers">Your cart is empty</h3>}
      
     </div>
   );

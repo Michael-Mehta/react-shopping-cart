@@ -11,7 +11,7 @@ import { add } from "stimulus";
 
 
 
-const Shop = ({handleEdit, handleRemoveEdit, cards, displayCards}) => {
+const Shop = ({handleEdit, handleRemoveEdit, cards, displayCards, hidden}) => {
 
   
 
@@ -25,7 +25,7 @@ const Shop = ({handleEdit, handleRemoveEdit, cards, displayCards}) => {
        <h1 className="main-headers">Shop Page</h1>
       
       <div className="main-buttons">
-      <button onClick={() => displayCards()} className = "see-items">See Items</button>
+      {!hidden && <button onClick={() => displayCards()} className = "see-items">See Items</button>}
       </div>
       <div className="card-grid">
       {cards.map(card => (

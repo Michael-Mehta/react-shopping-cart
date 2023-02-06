@@ -30,9 +30,8 @@ const [itemCount, setItemCount] = useState(0)
 const [display, setDisplay] = useState(0)
 const [cards, setCards] = useState([])
 const [copy, setCopy] = useState([])
-
-
-
+const [hidden, setHidden] = useState(false)
+const [showButton, setShowButton] = useState(false)
   const displayCards = () => {
 
 
@@ -41,6 +40,7 @@ const [copy, setCopy] = useState([])
   
 
     setCards(cardGrid);
+    setHidden(true)
 
   
   
@@ -51,11 +51,13 @@ const handleEdit = (card) => {
 
 
    addCopy(card)
+   setShowButton(true)
 }
 
 const handleRemoveEdit = (card) => {
 
     if(itemCount === 0){
+      setShowButton(false)
       return
     }else{
     removeCopy(card)
@@ -68,6 +70,7 @@ const handleRemoveEdit = (card) => {
 const clearCart = () => {
   setItemCount(0)
   setCopy([])
+  setShowButton(false)
 }
 
 const addCopy = (card) => {
@@ -105,6 +108,9 @@ const removeCopy = (coppy) => {
   
 };
 
+
+
+
   return (
 
    
@@ -115,7 +121,7 @@ const removeCopy = (coppy) => {
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop 
         handleEdit = {handleEdit}
-        
+        hidden = {hidden}
         cards = {cards}
         displayCards = {displayCards}
  
@@ -126,6 +132,7 @@ const removeCopy = (coppy) => {
          clearCart = {clearCart}
          copy = {copy} 
          handleRemoveEdit = {handleRemoveEdit}
+         showButton = {showButton}
          />} />
       </Routes>
     </BrowserRouter>
