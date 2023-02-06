@@ -1,0 +1,90 @@
+.Home {
+  text-align: center;
+}
+
+
+
+.NavBar {
+
+  
+  background-color: red;
+
+  color: aliceblue;
+}
+
+
+
+.navLinks {
+
+  display: flex;
+
+ justify-content: space-between;
+}
+
+.navLinks h1 {
+  display: flex;
+  font-size: 2rem;
+  justify-self: start;
+
+}
+
+.navLinks ul li .link {
+ 
+  padding: 10px;
+  text-decoration: none;
+  
+  color:aliceblue;
+ 
+}
+
+.navLinks ul li {
+  display: flex;
+  list-style-type: none;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.cart-num {
+
+  display: flex;
+  
+  
+}
+
+.cart-num p{
+
+margin-top: -20px;
+  
+}
+
+.card-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.cardPic {
+  
+  width: 60%;
+  border-radius: 6px;
+}
+
+.card { 
+display: flex;
+flex-direction: column;
+}
+
+.card button {
+  margin: 10px;
+}
+
+.cart-changes {
+
+  display: flex;
+  margin-left: 55px;
+}
+
+.cart {
+  color:aliceblue;
+}
