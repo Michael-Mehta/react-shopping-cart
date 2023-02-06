@@ -5,7 +5,7 @@ const Checkout = ({clearCart, copy, handleRemoveEdit}) => {
   return (
     <div className="Checkout">
    
-     <h1>Checkout</h1>
+     <h1 className= "main-headers">Checkout</h1>
 
 
 
@@ -34,10 +34,11 @@ const Checkout = ({clearCart, copy, handleRemoveEdit}) => {
 </div>
 
 
+     <div className = "main-buttons">
 
-     <button onClick={clearCart} className = "see-items">Purchase items</button>
+     <button onClick={clearCart} className = "see-items" >Purchase items</button>
 
-
+    </div>
 
 
      

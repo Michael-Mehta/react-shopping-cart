@@ -22,10 +22,11 @@ const Shop = ({handleEdit, handleRemoveEdit, cards, displayCards}) => {
 
       <div className="Shop">
 
-       <h1>Shop Page</h1>
+       <h1 className="main-headers">Shop Page</h1>
       
+      <div className="main-buttons">
       <button onClick={() => displayCards()} className = "see-items">See Items</button>
-       
+      </div>
       <div className="card-grid">
       {cards.map(card => (
 

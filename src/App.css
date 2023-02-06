@@ -88,6 +88,11 @@ flex-direction: column;
 
 }
 
+.main-buttons {
+  display: flex;
+  justify-content: center;
+}
+
 .cart-changes .add-item {
   padding: 5px;
 
@@ -126,6 +131,10 @@ button{
 }
 
 .see-items {
+
+  
+  
+
   padding: 15px;
 
   border-radius: 10px;
@@ -143,4 +152,9 @@ button{
 
 .cart {
   color:aliceblue;
+}
+
+.main-headers {
+  display: flex;
+  justify-content: center;
 }
