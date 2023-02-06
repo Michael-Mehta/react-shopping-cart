@@ -1,7 +1,7 @@
 import './App.css';
  
 
-const Checkout = ({clearCart, copy}) => {
+const Checkout = ({clearCart, copy, handleRemoveEdit}) => {
   return (
     <div className="Checkout">
    
@@ -22,7 +22,12 @@ const Checkout = ({clearCart, copy}) => {
                     src = {cop.card.src}
                     
                     alt ="grocery item picture"/>
-       
+                    
+                    <div className="cart-changes">
+
+                    <button onClick={() => handleRemoveEdit(cop)} className = "remove-item">Remove Item</button>
+
+                    </div>
                  </div>
                </div>
        ))}
@@ -30,7 +35,7 @@ const Checkout = ({clearCart, copy}) => {
 
 
 
-     <button onClick={clearCart}>Purchase items</button>
+     <button onClick={clearCart} className = "see-items">Purchase items</button>
 
 
 

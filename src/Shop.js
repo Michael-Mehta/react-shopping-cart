@@ -24,7 +24,7 @@ const Shop = ({handleEdit, handleRemoveEdit, cards, displayCards}) => {
 
        <h1>Shop Page</h1>
       
-      <button onClick={() => displayCards()}>See Items</button>
+      <button onClick={() => displayCards()} className = "see-items">See Items</button>
        
       <div className="card-grid">
       {cards.map(card => (
@@ -40,8 +40,7 @@ const Shop = ({handleEdit, handleRemoveEdit, cards, displayCards}) => {
                     alt ="grocery item picture"/>
        
                    <div className="cart-changes">
-                   <button onClick={() => handleEdit(card)}>Add To Cart</button>
-                   <button onClick={() => handleRemoveEdit(card)}>Remove Item</button>
+                   <button onClick={() => handleEdit(card)} className= "add-item">Add To Cart</button>
                    </div>
                  </div>
                </div>

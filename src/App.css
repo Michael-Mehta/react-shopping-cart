@@ -82,7 +82,63 @@ flex-direction: column;
 .cart-changes {
 
   display: flex;
-  margin-left: 55px;
+
+  margin-left: 92px;
+
+
+}
+
+.cart-changes .add-item {
+  padding: 5px;
+
+  border-radius: 5px;
+
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+
+}
+
+.cart-changes .remove-item {
+    
+  padding: 5px;
+
+  border-radius: 5px;
+
+  background-color: white;
+  color: black;
+  border: 2px solid red;
+
+}
+
+button{
+  transition-duration: 0.4s;
+}
+
+.cart-changes .add-item:hover {
+  background-color: #4CAF50; 
+  color: white;
+}
+
+.cart-changes .remove-item:hover {
+  background-color: red; 
+  color: white;
+}
+
+.see-items {
+  padding: 15px;
+
+  border-radius: 10px;
+  font-size: large;
+  font-weight: 200;
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.see-items:hover {
+  background-color: #4CAF50; 
+  color: white;
 }
 
 .cart {

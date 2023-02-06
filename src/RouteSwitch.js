@@ -58,10 +58,10 @@ const handleRemoveEdit = (card) => {
     if(itemCount === 0){
       return
     }else{
-    setItemCount(itemCount - 1)
+    removeCopy(card)
     }
 
-    removeCopy(card)
+    
     
 }
 
@@ -86,17 +86,18 @@ const addCopy = (card) => {
 }
 
 
-const removeCopy = (card) => {
+const removeCopy = (coppy) => {
 
   copy.map((cop, index) => {
 
-  if(cop.card.id === card.id)
+  if(cop.card.id === coppy.card.id)
   {
   setCopy([
     ...copy.slice(0, index),
     ...copy.slice(index + 1)
   ]);
 
+  setItemCount(itemCount - 1)
   return;
 }
 }
@@ -114,7 +115,7 @@ const removeCopy = (card) => {
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop 
         handleEdit = {handleEdit}
-        handleRemoveEdit = {handleRemoveEdit}
+        
         cards = {cards}
         displayCards = {displayCards}
  
@@ -124,6 +125,7 @@ const removeCopy = (card) => {
          <Route path = "/checkout" element = {<Checkout 
          clearCart = {clearCart}
          copy = {copy} 
+         handleRemoveEdit = {handleRemoveEdit}
          />} />
       </Routes>
     </BrowserRouter>
